@@ -1,0 +1,29 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "43cea5d3698ba3b90c6e38d63a10d33eef8073a6ce779a2587f933262b6770fe"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.9"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "pytube": {
+            "hashes": [
+                "sha256:2f9f467fab07a116bba435e5d7cde706222cacea37c44edcb9734fcfb897d19b",
+                "sha256:574260550644a48480637be29bfd339b4ac80f61bab5e0c9916b1e6787d59a46"
+            ],
+            "index": "pypi",
+            "version": "==10.7.2"
+        }
+    },
+    "develop": {}
+}

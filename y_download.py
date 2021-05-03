@@ -16,15 +16,14 @@ def get_video(url: str):
 
     try:
 
-        # If we not downloading first time
+        # If user not downloading first time
         if resolutions:
-            for i in resolutions:
-                i.pack_forget()
+            for resolution in resolutions:
+                resolution.pack_forget()
 
-        # Display to user that it's getting video
+        # Display user we getting video.
         frm_text_video.pack()
 
-        # Class to download video
         yt = YouTube(url)
 
         lbl_text_video['text'] = "Choose resolution"
@@ -33,8 +32,6 @@ def get_video(url: str):
         progressive_streams = yt.streams.filter(progressive=True)
 
         for counter, stream in enumerate(progressive_streams):
-            # print(f"{counter}: {stream.resolution}")
-
             frm_res = tk.Frame(master=window, padx=15, pady=10)
             res_video = tk.Button(
                 master=frm_res,
@@ -47,8 +44,6 @@ def get_video(url: str):
             resolutions.append(frm_res)
             frm_res.pack()
             res_video.pack()
-
-        print("Done")
 
     except:
         lbl_text_video['text'] = "URL not valid, try other one"
@@ -95,7 +90,6 @@ lbl_title.pack()
 ent_text.pack()
 btn_button.pack()
 
-# When getting the video
 frm_text_video = tk.Frame(master=window, pady=10)
 lbl_text_video = tk.Label(
     master=frm_text_video,
